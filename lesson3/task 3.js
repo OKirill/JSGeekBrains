@@ -27,6 +27,3 @@ while (value < limit) {
     }
 }
 console.log("Primes:", result);
-
-
-
