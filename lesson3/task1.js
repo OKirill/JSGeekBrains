@@ -12,16 +12,28 @@
 //     }
 // }
     
-// Basket = [1,5,6];
-// totalCost = 0;
+// var basket = {
+//     "Наушники:": 325,
+//     "Зарядное устройство:": 187,
+//     "Чехол для телефона": 220
+// };
 
-// function countBasketPrice(Basket) {
-//     for (item in Basket){
+// var basketItems = 0;                                                 Задание 2-3
 
-//         totalCost += item;
-//         console.log(totalCost);
-//     }
+// for (var items in basket) {
+//     basketItems++;
 // }
+
+// console.log("Всего товаров в корзине: " + basketItems);
+
+// var totalCost = 0;
+
+// for (var item in basket) {
+//         totalCost += basket[item];
+// }
+
+// console.log("Общая сумма товаров: " + totalCost);
+
 
 // for (i=0;i<10;i++) ---------Задание 4
 //     console.log(i)
