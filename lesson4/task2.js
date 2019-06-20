@@ -4,9 +4,9 @@ var basket = {
     charger: 187,
     usb: 220,
     price: 0,
-    priceCounter: function (basket) {
+    priceCounter: function () {
 
-        basket.price = basket.hearphones + basket.charger + basket.usb
+        this.price = this.hearphones + this.charger + this.usb
         console.log("Общая сумма товаров: " + price);
 
     }
