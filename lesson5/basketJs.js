@@ -17,6 +17,7 @@ for (let key in basket) {
 }
 
 let div = document.getElementsByTagName('div')[0];
+console.log("TCL: div", div)
 div.className = 'wrapper';
 let wrapper = document.querySelector('.wrapper');
 let msg = document.createElement('div');
