@@ -8,7 +8,7 @@ let basket = {
   }
 }
 
-basket.priceCounter();
+
 
 let div = document.getElementsByTagName('div')[0];
 div.className = 'wrapper';
@@ -22,6 +22,14 @@ btn1.addEventListener('click', () => {
   basket.socks = 345;
   basket.priceCounter = function() {
     basket.price = basket.headphones + basket.charger + basket.usb + basket.socks;
+  }
+  basket.priceCounter();
+});
+
+btn2.addEventListener('click', () => {
+  basket.pants = 223;
+  basket.priceCounter = function() {
+    basket.price = basket.headphones + basket.charger + basket.usb + basket.socks + basket.pants;
   }
   basket.priceCounter();
 });
