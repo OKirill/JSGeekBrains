@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="template" style="display:none">
+    <div class="item">
+      <h3 class="name"></h3>
+      <span class="price"></span>
+      <p>Цвет: <span class="color"></span></p>
+      <button class="buy">Купить</button>
+    </div>
+  </div>
+  <div id="cart"></div>
+  <div id="catalog" style="display: flex; justify-content: space-between;"></div>
+  <div class="cart-compose">
+    <h3 class="cart-compose__header">Состав корзины</h3>
+    <div class="cart-compose__items"></div>
+    <button class="cart-compose__btn">Далее</button>
+  </div>
+  <div class="cart-adress" style="display:none">
+    <h3 class="cart-adress__header">Адрес доставки</h3>
+    <input class="cart-adress__value"></input>
+    <button class="cart-adress__btn">Далее</button>
+  </div>
+  <div class="cart-comments" style="display:none">
+    <h3 class="cart-comments__header">Комментарий</h3>
+    <textarea name="cart-comments__value" cols="40" rows="3"></textarea>
+    <button class="cart-comments__btn">Закончить</button>
+  </div>
+  <script src="lesson7.js"></script>
+</body>
+
+</html>
