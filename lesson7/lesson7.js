@@ -3,27 +3,28 @@ var cart = [];
 var products = [
   {
     id: 1,
-    name: 'Фубтолка',
-    price: 1000,
-    color: 'Желтый',
+    name: 'Nintendo Switch',
+    price: 18900,
+    color: 'Серый',
   },
   {
     id: 2,
-    name: 'Джинсы',
-    price: 3000,
-    color: 'Синий',
+    name: 'Playstation 4 pro',
+    price: 27000,
+    color: 'Черный',
   },
   {
     id: 3,
-    name: 'Носки',
-    price: 300,
-    color: 'Черный',
+    name: 'Xbox One X',
+    price: 32000,
+    color: 'Белый',
   },
 ];
 
 var $cart = document.getElementById('cart');
 var $catalog = document.getElementById('catalog');
 var $template = document.getElementById('template').children[0];
+var cartCopmoseItems = document.querySelector('.cart-compose__items');
 
 $catalog.addEventListener('click', handleBuyClick);
 $cart.addEventListener('click', handleRemoveClick);
@@ -63,7 +64,7 @@ function handleBuyClick(event) {
     var idx = indexOf(cartItem);
 
     if(idx === -1) {
-      // товара в корзине еще нет
+      
       cartItem.quantity = 1;
       cart.push(cartItem);
     } else {
@@ -100,12 +101,13 @@ function countBasketPrice(cart) {
     }
 
     var $total = document.createElement('div');
-    $total.textContent = 'В корзине: ' + count + ' товаров на сумму ' + sum + ' рублей';
-
+    $total.textContent = `В корзине: ${count} товаров на сумму ${sum} рублей`;
+    cartCopmoseItems.textContent = `В корзине: ${count} товаров на сумму ${sum} рублей`;
     $cart.appendChild($ul);
     $cart.appendChild($total);
   } else {
     $cart.textContent = 'Корзина пуста';
+    cartCopmoseItems.textContent = 'Корзина пуста';
   }
 }
 
@@ -130,3 +132,19 @@ function buildCatalog(products) {
 
 buildCatalog(products);
 countBasketPrice(cart);
+
+var cartComposeBtn = document.querySelector('.cart-compose__btn');
+var cartAdressBtn = document.querySelector('.cart-adress__btn');
+var cartCompose = document.querySelector('.cart-compose');
+var cartAdress = document.querySelector('.cart-adress');
+var cartСomments = document.querySelector('.cart-comments');
+
+cartComposeBtn.addEventListener('click', () => {
+  cartCompose.style.display = 'none';
+  cartAdress.style.display = 'block';
+});
+
+cartAdressBtn.addEventListener('click', () => {
+  cartAdress.style.display = 'none';
+  cartСomments.style.display = 'block';
+})
